@@ -1,3 +1,6 @@
+###
+As a benchmark project for learning.
+
 TOML stands for Tom's Obvious, Minimal Language. This Go package provides a
 reflection interface similar to Go's standard library `json` and `xml` packages.
 
