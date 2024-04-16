@@ -1254,6 +1254,7 @@ func isControl(r rune) bool { // Control characters except \t, \r, \n
 		return (r >= 0x00 && r <= 0x1f) || r == 0x7f
 	}
 }
+//functions
 func isDigit(r rune) bool  { return r >= '0' && r <= '9' }
 func isBinary(r rune) bool { return r == '0' || r == '1' }
 func isOctal(r rune) bool  { return r >= '0' && r <= '7' }
