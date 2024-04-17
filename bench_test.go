@@ -13,7 +13,7 @@ import (
 	"github.com/BurntSushi/toml"
 	tomltest "github.com/BurntSushi/toml/internal/toml-test"
 )
-
+//BenchmarkDecode
 func BenchmarkDecode(b *testing.B) {
 	files := make(map[string][]string)
 	fs.WalkDir(tomltest.EmbeddedTests(), ".", func(path string, d fs.DirEntry, err error) error {

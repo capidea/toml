@@ -10,7 +10,7 @@ import (
 )
 
 type itemType int
-
+// define const
 const (
 	itemError itemType = iota
 	itemNIL            // used in the parser to indicate no type
