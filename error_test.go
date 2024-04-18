@@ -20,7 +20,7 @@ func TestErrorPosition(t *testing.T) {
 	}{
 		{"array/missing-separator-2.toml", `
 toml: error: expected a comma (',') or array terminator (']'), but got '2'
-
+//// TO test
 At line 1, column 13:
 
       1 | wrong = [ 1 2 3 ]

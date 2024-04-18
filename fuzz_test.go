@@ -1,5 +1,6 @@
 package toml
 
+//import 
 import (
 	"bytes"
 	"testing"
@@ -10,9 +11,6 @@ func FuzzDecode(f *testing.F) {
 
 	f.Add(`
 # This is an example TOML document which shows most of its features.
-
-# Simple key/value with a string.
-title = "TOML example \U0001F60A"
 
 desc = """
 An example TOML document. \
@@ -72,6 +70,7 @@ distros = [
 
 		NewEncoder(bytes.NewBuffer(buf)).Encode(m)
 
+		// TODO: should check if the output is equal to the input, too, but some
 		// TODO: should check if the output is equal to the input, too, but some
 		// information is lost when encoding.
 	})
