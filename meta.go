@@ -12,8 +12,8 @@ import (
 type MetaData struct {
 	context Key // Used only during decoding.
 
-	keyInfo map[string]keyInfo
 	mapping map[string]any
+	keyInfo map[string]keyInfo
 	keys    []Key
 	decoded map[string]struct{}
 	data    []byte // Input file; for errors.
