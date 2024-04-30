@@ -10,6 +10,7 @@ import (
 )
 
 type itemType int
+
 // define const
 const (
 	itemError itemType = iota
@@ -38,8 +39,8 @@ const (
 	itemInlineTableEnd
 )
 
-const eof = 0
 
+const eof = 0
 type stateFn func(lx *lexer) stateFn
 
 func (p Position) String() string {
@@ -65,8 +66,8 @@ type lexer struct {
 	// A stack of state functions used to maintain context.
 	//
 	// The idea is to reuse parts of the state machine in various places. For
-	// example, values can appear at the top level or within arbitrarily nested
 	// arrays. The last state on the stack is used after a value has been lexed.
+	// example, values can appear at the top level or within arbitrarily nested
 	// Similarly for comments.
 	stack []stateFn
 }
