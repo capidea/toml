@@ -93,7 +93,6 @@ func TestParseError(t *testing.T) {
 			`| toml: error: 200 is out of range for int8
 			 |
 			 | At line 1, column 6-9:
-			 |
 			 |       1 | Int = 200
 			 |                 ^^^
 			 | Error help:
@@ -259,7 +258,6 @@ func TestParseError(t *testing.T) {
 			have := pErr.ErrorWithUsage()
 
 			// have = strings.ReplaceAll(have, " ", "·")
-			// tt.err = strings.ReplaceAll(tt.err, " ", "·")
 			if have != tt.err {
 				t.Fatalf("\nwant:\n%s\nhave:\n%s", tt.err, have)
 			}
