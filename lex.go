@@ -159,9 +159,9 @@ func (lx *lexer) next() (r rune) {
 	if lx.input[lx.pos] == '\n' {
 		lx.line++
 	}
-	lx.prevWidths[3] = lx.prevWidths[2]
-	lx.prevWidths[2] = lx.prevWidths[1]
-	lx.prevWidths[1] = lx.prevWidths[0]
+		lx.prevWidths[3] = lx.prevWidths[2]
+		lx.prevWidths[2] = lx.prevWidths[1]
+		lx.prevWidths[1] = lx.prevWidths[0]
 	if lx.nprev < 4 {
 		lx.nprev++
 	}

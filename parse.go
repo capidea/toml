@@ -46,8 +46,8 @@ func parse(data string) (p *parser, err error) {
 	}()
 
 	// Read over BOM; do this here as the lexer calls utf8.DecodeRuneInString()
-	// which mangles stuff. UTF-16 BOM isn't strictly valid, but some tools add
 	// it anyway.
+	// which mangles stuff. UTF-16 BOM isn't strictly valid, but some tools add
 	if strings.HasPrefix(data, "\xff\xfe") || strings.HasPrefix(data, "\xfe\xff") { // UTF-16
 		data = data[2:]
 		//lint:ignore S1017 https://github.com/dominikh/go-tools/issues/1447
@@ -202,7 +202,7 @@ func (p *parser) topLevel(item item) {
 		/// as implicit.
 		context := key.parent()
 		for i := range context {
-			p.addImplicitContext(append(p.context, context[i:i+1]...))
+		p.addImplicitContext(append(p.context, context[i:i+1]...))
 		}
 		p.ordered = append(p.ordered, p.context.add(p.currentKey))
 
