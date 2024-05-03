@@ -71,7 +71,6 @@ distros = [
 		NewEncoder(bytes.NewBuffer(buf)).Encode(m)
 
 		// TODO: should check if the output is equal to the input, too, but some
-		// TODO: should check if the output is equal to the input, too, but some
 		// information is lost when encoding.
 	})
 }
