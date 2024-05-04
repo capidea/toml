@@ -12,6 +12,7 @@ import (
 type itemType int
 
 // define const
+// go parse for type
 const (
 	itemError itemType = iota
 	itemNIL            // used in the parser to indicate no type
